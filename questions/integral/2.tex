@@ -1,0 +1,105 @@
+{
+\subsection{Таблица основных неопределенных интегралов (с доказательствами).}
+\subsection*{Определение 1.2}
+
+Описанное выше семейство функций \( \{F(x) + c\} \) называется неопределенным интегралом функции \( f(x) \) на \( \langle a,b \rangle \) и обозначается
+
+\[
+\int f(x) \,dx.
+\]
+
+\subsection*{Таблица основных неопределенных интегралов}
+
+\begin{equation}
+\int 0 \,dx = c
+\end{equation}
+
+\begin{equation}
+\int x^\alpha \,dx = \frac{x^{\alpha+1}}{\alpha+1} + c, \quad \alpha \neq -1
+\end{equation}
+
+\begin{equation}
+\int \frac{1}{x} \,dx = \ln |x| + c
+\end{equation}
+
+\begin{equation}
+\int a^x \,dx = \frac{a^x}{\ln a} + c
+\end{equation}
+
+\begin{equation}
+\int \sin x \,dx = -\cos x + c
+\end{equation}
+
+\begin{equation}
+\int \cos x \,dx = \sin x + c
+\end{equation}
+
+\begin{equation}
+\int \frac{1}{\cos^2 x} \,dx = \tan x + c
+\end{equation}
+
+\begin{equation}
+\int \frac{1}{\sin^2 x} \,dx = -\cot x + c
+\end{equation}
+
+\begin{equation}
+\int \frac{1}{\sqrt{a^2 - x^2}} \,dx = \arcsin \frac{x}{a} + c, \quad a > 0
+\end{equation}
+
+\begin{equation}
+\int \frac{1}{x^2 + a^2} \,dx = \frac{1}{a} \arctan \frac{x}{a} + c, \quad a \neq 0
+\end{equation}
+
+\begin{equation}
+\int \sinh x \,dx = \cosh x + c
+\end{equation}
+
+\begin{equation}
+\int \cosh x \,dx = \sinh x + c
+\end{equation}
+
+\begin{equation}
+\int \frac{1}{\cosh^2 x} \,dx = \tanh x + c
+\end{equation}
+
+\begin{equation}
+\int \frac{1}{\sinh^2 x} \,dx = \coth x + c
+\end{equation}
+
+\begin{equation}
+\int \frac{1}{x^2 - a^2} \,dx = \frac{1}{2a} \ln \left| \frac{x - a}{x + a} \right| + c, \quad a \neq 0
+\end{equation}
+
+\begin{equation}
+\int \frac{1}{\sqrt{x^2 + \alpha}} \,dx = \ln \left| x + \sqrt{x^2 + \alpha} \right| + c, \quad \alpha \neq 0
+\end{equation}
+
+\subsection*{Комментарий}
+
+Формулы справедливы на всех промежутках \( \langle a, b \rangle \), на которых существуют функции, стоящие под знаком интеграла.
+
+\subsection*{Доказательство}
+
+Формулы доказываются непосредственной проверкой того, что производная выражения, стоящего справа, совпадает с подынтегральной функцией.
+
+Проверим формулы (15) и (16):
+
+\begin{equation}
+\left( \frac{1}{2a} \ln \left| \frac{x - a}{x + a} \right| \right)' = \frac{1}{4a} \ln \left( \frac{x - a}{x + a} \right)^2' = \frac{1}{4a} \left( \frac{x - a}{x + a} \right)^2 \left( \frac{x - a}{x + a} \right)' = 
+\end{equation}
+
+\begin{equation}
+= \frac{1}{4a} \left( \frac{x - a}{x + a} \right)^2 \frac{(x - a)(x + a) - (x - a)(x + a)}{(x + a)^2} = \frac{1}{x^2 - a^2}
+\end{equation}
+
+
+\begin{equation}
+\left( \ln \left| x + \sqrt{x^2 + \alpha} \right| \right)'  = \frac{1}{2} \left( x + \sqrt{x^2 + \alpha} \right)^2 \left( x + \sqrt{x^2 + \alpha} \right)' = 
+\end{equation}
+
+\begin{equation}
+= \frac{1}{2} \left( x + \sqrt{x^2 + \alpha} \right)^2 2 \left( x + \sqrt{x^2 + \alpha} \right) \left( 1 + \frac{x}{\sqrt{x^2 + \alpha}} \right) = \frac{x + \sqrt{x^2 + \alpha}}{\sqrt{x^2 + \alpha}} = \frac{1}{\sqrt{x^2 + \alpha}}
+\end{equation} 
+
+
+}

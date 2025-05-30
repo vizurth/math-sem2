@@ -1,0 +1,73 @@
+{
+\subsection{Интегрирование с помощью замены переменной. Вычисление }
+\subsection*{Теорема: Простейшие свойства неопределенного интеграла}
+
+Пусть \( F(x) \) дифференцируема на \( \langle a, b \rangle \). Тогда 
+
+
+\[
+\int dF(x) = F(x) + c.
+\]
+
+
+
+Пусть существует \( \int f(x)dx \). Тогда 
+
+
+\[
+d\left(\int f(x)dx\right) = f(x)dx, \quad \text{то есть} \quad \left(\int f(x)dx\right)' = f(x) \quad \text{на} \quad \langle a, b \rangle.
+\]
+
+
+
+Пусть существуют \( \int f_1(x)dx \), \( \int f_2(x)dx \) на \( \langle a, b \rangle \). Тогда существует 
+
+
+\[
+\int (a f_1(x) + b f_2(x))dx = a \int f_1(x)dx + b \int f_2(x)dx \quad \text{на} \quad \langle a, b \rangle.
+\]
+
+\subsection*{Теорема 1.4: Интегрирование при помощи замены переменной}
+
+Пусть существует
+
+
+\[
+\int f(t) dt = F(t) + c \quad \text{на } \langle a, b \rangle.
+\]
+
+
+
+Пусть \( \varphi(x) \) дифференцируема на \( \langle \alpha, \beta \rangle \), \( \varphi(\langle \alpha, \beta \rangle) = \langle a, b \rangle \). Тогда существует
+
+
+\[
+\int f(\varphi(x)) \varphi'(x) dx = F(\varphi(x)) + c \quad \text{на } \langle \alpha, \beta \rangle.
+\]
+
+\subsection*{Теорема 1.5: Интегрирование при помощи замены переменной (подстановка)}
+
+Пусть существует
+
+
+\[
+\int f(\varphi(t)) \varphi'(t) dt = G(t) + c \quad \text{на } \langle \alpha, \beta \rangle.
+\]
+
+
+
+Пусть \( \varphi(t) \) дифференцируема и строго монотонна на \( \langle \alpha, \beta \rangle \), \( \varphi(\langle \alpha, \beta \rangle) = \langle a, b \rangle \).
+
+Тогда существует
+
+\[
+\int f(x)dx = G(\varphi^{-1}(x)) + c \quad \text{на } \langle a, b \rangle.
+\]
+
+\subsection*{Пример:}
+
+\[
+\int \sqrt{a^2 - x^2} \,dx = \frac{a^2}{2} \arcsin \frac{x}{a} + \frac{x}{2} \sqrt{a^2 - x^2} + c \quad (a > 0).
+\]
+
+}

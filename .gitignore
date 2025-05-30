@@ -1,0 +1,50 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# macOS resource forks
+._*
+
+# macOS Spotlight
+.Spotlight-V100
+.Trashes
+
+# macOS Finder tags
+.metadata_never_index
+
+# Visual Studio Code settings
+.vscode/
+
+# Build and dependency directories (common)
+node_modules/
+dist/
+build/
+bin/
+obj/
+out/
+
+# Python-specific (if you're using Python in VS Code)
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+.env
+.venv
+
+# Logs
+*.log
+
+# VS temporary files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Backup files
+*~
+*.bak
+*.tmp
+*.swp
+
+*.aux

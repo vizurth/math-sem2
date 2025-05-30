@@ -1,0 +1,157 @@
+{
+\subsection{Непрерывность  функции }
+\subsection*{Определение 1.4}
+
+Пусть \( f(x) \in R([a, b]) \).
+
+Рассмотрим функцию \( \Phi(x) = \int_{a}^{x} f(t) dt \), определенную на \( [a, b] \).
+
+Функция \( \Phi(x) \) называется функцией верхнего предела интеграла от \( f(x) \).
+
+
+\subsection*{Теорема 1.9}
+
+Функция \( \Phi(x) \) непрерывна на \( [a, b] \).
+
+\subsection*{Доказательство}
+
+Зафиксируем произвольную точку \( x_0 \in [a, b] \). Тогда для любой точки \( x \in [a, b] \):
+
+\[
+\int_{a}^{x} f(t)dt = \int_{a}^{x_0} f(t)dt + \int_{x_0}^{x} f(t)dt,
+\]
+
+то есть,
+
+\[
+\Phi(x) - \Phi(x_0) = \int_{x_0}^{x} f(t)dt.
+\]
+
+Поскольку \( f(x) \in R([a, b]) \), то \( f(x) \) ограничена на \( [a, b] \), то есть,
+
+\[
+\exists K: |f(x)| \leq K \text{ на } [a, b].
+\]
+
+Тогда
+
+\[
+\left| \int_{x_0}^{x} f(t)dt \right| \leq K|x - x_0|.
+\]
+
+
+
+Следовательно,
+
+\[
+\left| \Phi(x) - \Phi(x_0) \right| \leq K|x - x_0| \xrightarrow{x \to x_0} 0.
+\]
+
+Таким образом,
+
+\[
+\lim_{x \to x_0} \Phi(x) = \Phi(x_0),
+\]
+
+
+то есть, \( \Phi(x) \) непрерывна в точке \( x_0 \).
+
+Поскольку \( x_0 \) — произвольная точка отрезка \( [a, b] \), то \( \Phi(x) \) непрерывна на \( [a, b] \).
+
+\subsection*{Теорема 1.10}
+
+В каждой точке \( x \) промежутка \( [a, b] \), в которой \( f(x) \) непрерывна, существует \( \Phi'(x) = f(x) \).
+
+
+\subsection*{Доказательство}
+
+Зафиксируем произвольную точку \( x_0 \in [a, b] \), в которой функция непрерывна.
+
+Возьмем произвольное \( \varepsilon > 0 \).
+
+
+
+\[
+\exists \delta > 0: (|t - x_0| < \delta \Rightarrow |f(t) - f(x_0)| < \varepsilon),
+\]
+
+
+
+то есть,
+
+
+
+\[
+f(x_0) - \varepsilon < f(t) < f(x_0) + \varepsilon, \quad \forall t \in (x_0 - \delta, x_0 + \delta).
+\]
+
+
+
+Пусть \( |\Delta x| < \delta \). Тогда на отрезке с концами в точках \( x_0 \) и \( x_0 + \Delta x \) функция \( f(t) \) удовлетворяет неравенству.
+
+1) Тогда:
+
+а) Пусть \( \Delta x \geq 0 \),
+
+
+
+\[
+(f(x_0) - \varepsilon) \Delta x \leq \int_{x_0}^{x_0+\Delta x} f(t) dt \leq (f(x_0) + \varepsilon) \Delta x;
+\]
+
+
+
+б) Пусть \( \Delta x < 0 \),
+
+
+
+\[
+(f(x_0) - \varepsilon)(- \Delta x) \leq \int_{x_0+\Delta x}^{x_0} f(t) dt \leq (f(x_0) + \varepsilon)(- \Delta x).
+\]
+
+
+
+Разделим все части неравенства из пункта а) на \( \Delta x \), а все части неравенства из пункта б) на \( - \Delta x \). Получим:
+
+
+
+\[
+f(x_0) - \varepsilon \leq \frac{1}{\Delta x} \int_{x_0}^{x_0+\Delta x} f(t) dt \leq f(x_0) + \varepsilon,
+\]
+
+
+
+что эквивалентно:
+
+
+
+\[
+\left| \frac{1}{\Delta x} \int_{x_0}^{x_0+\Delta x} f(t) dt - f(x_0) \right| \leq \varepsilon.
+\]
+
+2) Рассмотрим
+
+
+\[
+\Phi(x_0 + \Delta x) - \Phi(x_0) = \int_{a}^{x_0+\Delta x} f(t)dt - \int_{a}^{x_0} f(t)dt = \int_{x_0}^{x_0+\Delta x} f(t)dt.
+\]
+
+Следовательно,
+
+\[
+\frac{\Phi(x_0 + \Delta x) - \Phi(x_0)}{\Delta x} = \frac{1}{\Delta x} \int_{x_0}^{x_0+\Delta x} f(t)dt.
+\]
+
+3) Получили, что
+
+\[
+\forall \varepsilon > 0 \, \exists \delta > 0 : \quad ( |\Delta x| < \delta \Rightarrow \left| \frac{\Phi(x_0 + \Delta x) - \Phi(x_0)}{\Delta x} - f(x_0) \right| \leq \varepsilon).
+\]
+
+Отсюда
+\[
+\lim_{\Delta x\to 0} \frac{\Phi(x_0 + \Delta x) - \Phi(x_0)}{\Delta x} = f(x_0),
+\]
+
+то есть, существует \( \Phi'(x_0) = f(x_0) \).
+}

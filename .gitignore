@@ -48,3 +48,6 @@ __pycache__/
 *.swp
 
 *.aux
+*.toc
+*.out
+*.synctex.gz

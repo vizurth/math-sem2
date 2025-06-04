@@ -1,3 +1,79 @@
 {
-\subsection{Формула Тейлора функции р переменных. ????}
+\subsection{Формула Тейлора функции р переменных.}
+
+\subsection*{Теорема 4.3. Формула Тейлора}
+
+( Напоминание (p=1): пусть \( h(t) \) определена в окрестности \( U(t₀) \subset \mathbb{R} \) и имеет там \( (n+1) \) производную. Тогда \( \forall t \in U(t₀) \) справедливо  
+
+
+
+\[
+h(t) = h(t₀) + \sum_{k=1}^{n} \frac{h^{(k)}(t₀)}{k!} (t - t₀)^k + \frac{h^{(n+1)}(t₀ + \Theta \Delta t)}{(n+1)!} (t - t₀)^{n+1} =
+\]
+
+
+
+
+
+\[
+= h(t₀) + \sum_{k=1}^{n} \frac{d^k h(t₀, \Delta t)}{k!} + \frac{d^{(n+1)} h(t₀ + \Theta \Delta t, \Delta t)}{(n+1)!},
+\]
+
+
+
+где приращение \( \Delta t = t - t₀ \), \( \Theta \in (0,1) \).  
+
+Пусть \( f(X) \) определена в окрестности \( U(X₀) \subset \mathbb{R}_p \) и имеет там все непрерывные частные производные до \( (n+1) \)-го порядка включительно. Тогда \( \forall X \in U(X₀) \) справедливо  
+
+
+
+\[
+f(X) = f(X₀) + \sum_{k=1}^{n} \frac{d^k f(X₀, \Delta X)}{k!} + \frac{d^{(n+1)} f(X₀ + \Theta \Delta X, \Delta X)}{(n+1)!},
+\]
+
+
+
+где приращение \( \Delta X = X - X₀ \), \( \Theta \in (0,1) \) (без доказательства).
+
+\subsection*{Замечания и следствия}
+
+
+
+\[
+d^{n+1} f \left( X_0 + \Theta \Delta X, \Delta X \right)
+\]
+
+
+
+1) \( r(X) = \frac{d^{n+1} f \left( X_0 + \Theta \Delta X, \Delta X \right)}{(n+1)!} \) - остаточный член в форме Лагранжа.
+
+2) Для остаточного члена справедлива формула Пеано: \( r(X) = o(|\Delta X|^r) \) при \( \Delta X \rightarrow 0 \).
+
+3) \( p = 2 \):
+
+
+
+\[
+f(x,y) = f(x_0, y_0) + \frac{1}{1!} \left( \frac{\partial f}{\partial x} (x_0, y_0) (x - x_0) + \frac{\partial f}{\partial y} (x_0, y_0) (y - y_0) \right) +
+\]
+
+
+
+
+
+\[
++ \frac{1}{2!} \left( \frac{\partial^2 f}{\partial x^2} (x_0, y_0) (x - x_0)^2 + 2 \frac{\partial^2 f}{\partial x \partial y} (x_0, y_0) (x - x_0)(y - y_0) + \frac{\partial^2 f}{\partial y^2} (x_0, y_0) (y - y_0)^2 \right) + \ldots
+\]
+
+
+
+
+
+\[
++ \frac{1}{n!} \left( \frac{\partial}{\partial x} (x - x_0) + \frac{\partial}{\partial y} (y - y_0) \right)^n f(x_0, y_0) + o \left( \left( \sqrt{(x - x_0)^2 + (y - y_0)^2} \right)^n \right),
+\]
+
+
+
+
 }

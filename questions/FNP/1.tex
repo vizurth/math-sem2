@@ -1,4 +1,197 @@
 {
 \section{Дифференциальное исчисление функций нескольких переменных.}
-\subsection{Последовательность точек в \( R_p \). Теорема о покоординатной сходимости. ?????}
+\subsection{Последовательность точек в \( R_p \). Теорема о покоординатной сходимости.}
+
+\subsection*{Определение 1.1. Скалярное произведение и метрика в пространстве \( \mathbb{R}_p \)}
+
+Пусть \( X, Y \in \mathbb{R}_p \). Будем называть их точками (по аналогии с точками из \( \mathbb{R}, \mathbb{R}_2, \mathbb{R}_3 \)).
+
+В \( \mathbb{R}_p \) введено скалярное произведение:
+
+
+
+\[
+(X, Y) = \sum_{i=1}^{p} x_i y_i
+\]
+
+
+
+если \( X = (x_1, x_2, ..., x_p) \), \( Y = (y_1, y_2, ..., y_p) \), то \( (X, Y) = \sum_{i=1}^{p} x_i y_i \).
+
+С помощью скалярного произведения введено расстояние между точками (метрика):
+
+
+
+\[
+r(X, Y) = |Y - X| = \sqrt{(y_1 - x_1)^2 + ... + (y_p - x_p)^2}
+\]
+
+
+
+Оно удовлетворяет аксиомам расстояния (метрики):
+
+1) \( r(X, Y) \geq 0 \); \( r(X, Y) = 0 \Leftrightarrow X = Y \).
+
+2) \( r(X, Y) = r(Y, X) \).
+
+3) \( r(X, Z) \leq r(X, Y) + r(Y, Z) \)
+
+(следует из неравенства треугольника для скалярного произведения:
+
+
+
+\[
+r(X, Z) = |X - Z| = |(X - Y) + (Y - Z)| \leq |X - Y| + |Y - Z| = r(X, Y) + r(Y, Z)
+\]
+
+).
+
+\subsection*{Определение 1.2. Открытый шар в пространстве \( \mathbb{R}_p \)}
+
+Пусть точка \( A \in \mathbb{R}_p \) и \( \delta > 0 \).
+
+Множество
+
+
+
+\[
+D^\delta(A) = \{X \in \mathbb{R}_p | r(A, X) < \delta \}
+\]
+
+
+
+называется \textbf{открытым шаром} с центром в точке \( A \) и радиусом \( \delta \).
+
+
+\subsection*{Определение 1.3. Окрестность точки}
+
+1) Множество \( D^{\delta}(A) \) называется \textbf{окрестностью точки} \( A \) радиуса \( \delta \) и обозначается \( U^{\delta}(A) \).  
+
+2) Множество \( D^{\delta}(A) \setminus \{A\} \) называется \textbf{проколотой окрестностью точки} \( A \) радиуса \( \delta \) и обозначается \( \dot{U}^{\delta}(A) \).  
+
+\subsection*{Определение 1.4. Ограниченное множество}
+
+Множество \( \Omega \subset \mathbb{R}^{p} \) называется \textbf{ограниченным}, если существует число \( M > 0 \):  
+
+
+
+\[
+\Omega \subset D_{M}(0) \Leftrightarrow |\chi| < M, \quad \forall \chi \in \Omega.
+\]
+
+
+
+\subsection*{Определение 1.5. Предел последовательности}
+
+Пусть \( \{X^{(n)}\}_{n=1}^{\infty} \) – последовательность точек из \( \mathbb{R}^{p} \).  
+
+Точка \( A \) называется \textbf{пределом последовательности}, если  
+
+
+
+\[
+\forall \varepsilon > 0 \quad \exists N \in \mathbb{N}: \quad \forall n \geq N \quad |X^{(n)} - A| < \varepsilon.
+\]
+
+
+
+Обозначения:  
+
+\[
+\lim_{n \to \infty} X^{(n)} = A \quad \text{или} \quad X^{(n)} \xrightarrow{n \to \infty} A.
+\]
+
+
+\subsection*{Следствие}
+
+\[
+X^{(n)} \xrightarrow{n \to \infty} A \iff r(X^{(n)}, A) \xrightarrow{n \to \infty} 0 \quad (\text{то есть,} \quad |X^{(n)} - A| \xrightarrow{n \to \infty} 0).
+\]
+
+В частности,
+
+
+
+\[
+X^{(n)} \xrightarrow{n \to \infty} 0 \iff |X^{(n)}| \xrightarrow{n \to \infty} 0.
+\]
+
+\subsection*{Теорема 1.1 о покоординатной сходимости}
+
+Пусть \( \{X^{(n)}\}_{n=1}^{\infty} \) – последовательность точек из \( \mathbb{R}_p \), \( X^{(n)} = (x_1^{(n)}, \ldots, x_p^{(n)}) \),
+
+
+
+\[
+A = (a_1, \ldots, a_p).
+\]
+
+\[
+X^{(n)} \xrightarrow{n \to \infty} A \iff x_i^{(n)} \xrightarrow{n \to \infty} a_i \quad (i = 1, 2, \ldots, p).
+\]
+
+
+\subsection*{Доказательство теоремы 1.1}
+
+1) Пусть \(X^{(n)} \to A\) при \(n \to \infty\).
+
+Зафиксируем произвольное \( \varepsilon > 0 \). \( \exists N \in \mathbb{N} \), такое что \( \forall n \geq N \) выполняется:
+
+
+
+\[
+|X^{(n)} - A| < \varepsilon.
+\]
+
+
+
+Тогда:
+
+
+
+\[
+|x_i^{(n)} - a_i| \leq \sqrt{(x_1^{(n)} - a_1)^2 + \ldots + (x_i^{(n)} - a_i)^2 + \ldots + (x_p^{(n)} - a_p)^2} = |X^{(n)} - A| < \varepsilon.
+\]
+
+
+
+Следовательно, \( \forall \varepsilon > 0 \) \( \exists N \in \mathbb{N} \), такое что \( \forall n \geq N \):
+
+
+
+\[
+|x_i^{(n)} - a_i| < \varepsilon.
+\]
+
+
+
+То есть, \( x_i^{(n)} \to a_i \) при \( n \to \infty \), \( i = 1, 2, \ldots, p \).
+
+2) Пусть \( x_i^{(n)} \to a_i \) при \( n \to \infty \), \( i = 1, 2, \ldots, p \).
+
+Зафиксируем произвольное \( \varepsilon > 0 \). \( \exists N_i \in \mathbb{N} \), такое что \( \forall n \geq N_i \):
+
+
+
+\[
+|x_i^{(n)} - a_i| < \frac{\varepsilon}{\sqrt{p}}, \quad i = 1, 2, \ldots, p.
+\]
+
+
+
+Пусть \( N = \max \{N_1, \dots, N_p\} \). Тогда \( \forall n \geq N \):
+
+
+
+\[
+|X^{(n)} - A| = \sqrt{(x_1^{(n)} - a_1)^2 + \ldots + (x_i^{(n)} - a_i)^2 + \ldots + (x_p^{(n)} - a_p)^2} < \sqrt{\frac{\varepsilon^2}{p} + \ldots + \frac{\varepsilon^2}{p}} = \varepsilon.
+\]
+
+\subsection*{Следствие}
+
+Справедливы теоремы о пределе суммы (разности) последовательностей.
+
+
+
+
 }

@@ -1,3 +1,152 @@
 {
-\subsection{Дифференцируемость функции \(p\) переменных. Дифференцируемость суммы и произведения дифференцируемых функций. (c доказательством) ????}
+\subsection{Дифференцируемость функции \(p\) переменных. Дифференцируемость суммы и произведения дифференцируемых функций. (c доказательством)}
+\subsection*{Определение 3.1}
+
+Пусть \( \Omega \subset \mathbb{R}^p \), \( f: \Omega \to \mathbb{R} \). Пусть \( A \) — внутренняя точка \( \Omega \).
+
+Функция \( f \) называется \textbf{дифференцируемой} в точке \( A \), если её приращение в этой точке можно представить в виде:
+
+
+
+\[
+f(A + \Delta X) - f(A) = (M, \Delta X) + o(\Delta X),
+\]
+
+
+
+где:  
+- \( \Delta X \in \mathbb{R}^p \) — приращение точки \( A \), такое что \( A + \Delta X \in \Omega \);  
+- строка \( M \in \mathbb{R}^p \) не зависит от \( \Delta X \);  
+- \( (M, \Delta X) \) — скалярное произведение строк;  
+- \( o(\Delta X) \to 0 \) при \( |\Delta X| \to 0 \).  
+
+Строку \( M \) называют \textbf{производной функции} \( f \) в точке \( A \) и обозначают \( f'(A) \) (**\( f'(A) \in \mathbb{R}^p \)**).  
+
+Скалярное произведение \( (M, \Delta X) \) называют \textbf{дифференциалом} \( f \) в точке \( A \) и обозначают \( df(A) \) (**\( df(A) \in \mathbb{R} \)**).  
+
+\subsection*{Следствие}
+
+Из дифференцируемости \( f \) в точке \( A \) следует её непрерывность в точке \( A \), так как \( \Delta f \to 0 \) при \( \Delta X \to 0 \).  
+
+Действительно,  
+
+
+\[
+|(M, \Delta X)| \leq |M| |\Delta X| \to 0, \quad \text{при } \Delta X \to 0.
+\]
+
+  
+Также,  
+
+
+\[
+o(\Delta X) = |o(\Delta X)| |\Delta X|, \quad \text{и } \quad |o(\Delta X)| \to 0, \quad \text{при } \Delta X \to 0.
+\]
+
+  
+
+\subsection*{Теорема 3.1}
+
+Пусть \( f, g \) — дифференцируемые функции в точке \( A \in \mathbb{R}^p \). Тогда в точке \( A \) справедливы следующие свойства:  
+
+1) Существует \( (f + g)' = f' + g' \). 
+
+2) Существует \( (\lambda f)' = \lambda f' \), где \( \lambda \) — константа. 
+
+3) Существует \( (fg)' = g'f + fg' \), где \( f = f(A), g = g(A) \in \mathbb{R} \), \( f' = f'(A), g' = g'(A) \in \mathbb{R}^p \).  
+
+\subsection*{Доказательство теоремы 3.1}
+
+Рассмотрим \( (fg)(A + \Delta X) - (fg)(A) \):
+
+
+
+\[
+(fg)(A + \Delta X) - (fg)(A) = f(A + \Delta X)g(A + \Delta X) - f(A)g(A).
+\]
+
+
+
+Разложим \( f(A + \Delta X) \) и \( g(A + \Delta X) \):
+
+
+
+\[
+= [f(A) + f'(A, \Delta X) + r_1(\Delta X)] [g(A) + g'(A, \Delta X) + r_2(\Delta X)] - f(A)g(A),
+\]
+
+
+
+где \( r_1(\Delta X) = o(\Delta X), r_2(\Delta X) = o(\Delta X). \)
+
+Раскрываем скобки:
+
+
+
+\[
+= f(A)g'(A, \Delta X) + g(A)f'(A, \Delta X) + r(\Delta X),
+\]
+
+
+
+где \( r(\Delta X) \) содержит все остальные слагаемые.
+
+Если докажем, что \( r(\Delta X) = o(\Delta X) \), то 
+
+
+
+\[
+(fg)'(A) = f'(A)g(A) + g'(A)f(A).
+\]
+
+
+
+\subsection*{Доказательство свойства \( r(\Delta X) = o(\Delta X) \)}
+
+Рассмотрим выражение:
+
+
+
+\[
+r(\Delta X) = f(A)r_2(\Delta X) + g(A)r_1(\Delta X) + f'(A, \Delta X)g'(A, \Delta X) +
+\]
+
+
+
+
+
+\[
++ f'(A, \Delta X)r_2(\Delta X) + g'(A, \Delta X)r_1(\Delta X) + r_1(\Delta X)r_2(\Delta X).
+\]
+
+
+
+Слагаемое (1):
+\[f(A)\frac{r_2(\Delta X)}{|\Delta X|} \to 0  \text{, так как \,\,}  r_2(\Delta X) = o(\Delta X\]
+
+Слагаемое (2) аналогично.
+
+Слагаемое (3):
+\[ \frac{|f'(A, \Delta X)g'(A, \Delta X)|}{|\Delta X|} \leq |f'(A)||g'(A)||\Delta X| \to 0 \]
+
+Слагаемое (4):
+\[ \frac{|f'(A, \Delta X)r_2(\Delta X)|}{|\Delta X|} \leq |f'(A)||\Delta X| \frac{r_2(\Delta X)}{|\Delta X|} \to 0 \]
+
+Слагаемое (5) аналогично.
+
+Слагаемое (6):
+\[ \frac{r_1(\Delta X)r_2(\Delta X)}{|\Delta X|} = \frac{r_1(\Delta X)}{|\Delta X|} \cdot \frac{r_2(\Delta X)}{|\Delta X|} \cdot |\Delta X| \to 0 \].
+
+\subsection*{Следствие}
+
+Аналогичные формулы справедливы для дифференциалов, для доказательства умножим обе части равенств 1), 2), 3) скалярно на \( \Delta X \).
+
+В пункте 3) получим:
+
+
+
+\[
+((fg)', \Delta X) = g(f', \Delta X) + f(g', \Delta X) \iff d(fg) = g \, df + f \, dg.
+\]
+
 }

@@ -1,3 +1,205 @@
 {
-\subsection{Производная сложной функции. Частные производные сложной функции. Инвариантность формы первого дифференциала. ?????}
+\subsection{Производная сложной функции. Частные производные сложной функции. Инвариантность формы первого дифференциала.}
+
+\subsection*{Определение 3.3}
+
+Пусть функции \( f_1(X), f_2(X), \dots, f_m(X) \) определены на множестве \( \Omega \subseteq \mathbb{R}^p \).
+
+Пусть функция \( g(Y) \) определена на множестве \( D \subseteq \mathbb{R}^m \), и точка 
+
+
+
+\[
+Y = (f_1(X), f_2(X), \dots, f_m(X)) \in D, \quad \forall X \in \Omega.
+\]
+
+
+
+Тогда имеет смысл сложная функция 
+
+
+
+\[
+F(X) = g(f_1(X), f_2(X), \dots, f_m(X)),
+\]
+
+
+
+определенная на \( \Omega \).
+
+\subsection*{Теорема 3.4}
+
+Пусть имеет смысл сложная функция \( F(X) = g(f_1(X), f_2(X), \dots, f_m(X)) \), определенная на \( \Omega \).
+
+Пусть функции \( f_1(X), f_2(X), \dots, f_m(X) \) дифференцируемы в точке \( X_0 \), а функция \( g(Y) \) дифференцируема в точке
+
+
+
+\[
+Y_0 = (f_1(X_0), f_2(X_0), \dots, f_m(X_0)).
+\]
+
+Тогда функция \( F(X) \) дифференцируема в точке \( X_0 \), и
+
+\[
+F'(X_0) = g'(Y_0) \begin{pmatrix} f_1'(X_0) \\ \vdots \\ f_m'(X_0) \end{pmatrix}.
+\]
+
+Где:
+
+\[
+F'(X_0) \in \mathbb{R}_p, \quad g'(Y_0) \in \mathbb{R}_m, \quad f_i'(X_0) \in \mathbb{R}_p \quad (i=1, \dots, m).
+\]
+
+\[
+\begin{pmatrix} f_1'(X_0) \\ \vdots \\ f_m'(X_0) \end{pmatrix}
+\]
+
+
+— матрица размера \( m \times p \), обозначим её \( f'(X_0) \).
+
+\subsection*{Следствия}
+
+1) Частные производные сложной функции:
+
+
+
+\[
+F'(X_0) = g'(Y_0) \begin{pmatrix} f'_1(X_0) \\ \vdots \\ f'_m(X_0) \end{pmatrix}.
+\]
+
+
+
+Следовательно,
+
+
+
+\[
+\frac{\partial F}{\partial x_i}(X_0) = \left( \frac{\partial g}{\partial y_1}(Y_0), \ldots, \frac{\partial g}{\partial y_m}(Y_0) \right) \begin{pmatrix} \frac{\partial f_1}{\partial x_i}(X_0) \\ \vdots \\ \frac{\partial f_m}{\partial x_i}(X_0) \end{pmatrix} =
+\]
+
+
+
+
+
+\[
+= \frac{\partial g}{\partial y_1}(Y_0) \frac{\partial f_1}{\partial x_i}(X_0) + \ldots + \frac{\partial g}{\partial y_m}(Y_0) \frac{\partial f_m}{\partial x_i}(X_0) \quad (i = 1, \ldots, p).
+\]
+
+\subsection*{Теорема 3.4}
+
+Пусть имеет смысл сложная функция \( F(X) = g(f_1(X), f_2(X), \dots, f_m(X)) \), определенная на \( \Omega \).
+
+Пусть функции \( f_1(X), f_2(X), \dots, f_m(X) \) дифференцируемы в точке \( X_0 \), а функция \( g(Y) \) дифференцируема в точке
+
+
+
+\[
+Y_0 = (f_1(X_0), f_2(X_0), \dots, f_m(X_0)).
+\]
+
+
+
+Тогда функция \( F(X) \) дифференцируема в точке \( X_0 \), и
+
+
+
+\[
+F'(X_0) = g'(Y_0) \begin{pmatrix} f_1'(X_0) \\ \vdots \\ f_m'(X_0) \end{pmatrix}.
+\]
+
+
+
+Где:
+
+
+
+\[
+F'(X_0) \in \mathbb{R}_p, \quad g'(Y_0) \in \mathbb{R}_m, \quad f_i'(X_0) \in \mathbb{R}_p \quad (i=1, \dots, m).
+\]
+
+
+
+
+
+\[
+\begin{pmatrix} f_1'(X_0) \\ \vdots \\ f_m'(X_0) \end{pmatrix}
+\]
+
+
+
+— матрица размера \( m \times p \), обозначим её \( f'(X_0) \).
+
+\subsection*{Замечание 3.1}
+
+Пусть \( M, P \) - строки из \( \mathbb{R}_p \). Тогда их скалярное произведение \( (M, P) \) совпадает с произведением строки \( M \) на столбце \( P^T \), то есть, 
+
+
+
+\[
+(M, P) = M P^T.
+\]
+
+
+\subsection*{Частные производные сложной функции}
+
+
+
+\[
+F'(X_0) = g'(Y_0) \begin{pmatrix} f'_1(X_0) \\ \vdots \\ f'_m(X_0) \end{pmatrix}.
+\]
+
+
+
+Следовательно,
+
+
+
+\[
+\frac{\partial F}{\partial x_i}(X_0) = \left( \frac{\partial g}{\partial y_1}(Y_0), \ldots, \frac{\partial g}{\partial y_m}(Y_0) \right) \begin{pmatrix} \frac{\partial f_1}{\partial x_i}(X_0) \\ \vdots \\ \frac{\partial f_m}{\partial x_i}(X_0) \end{pmatrix} =
+\]
+
+
+
+
+
+\[
+= \frac{\partial g}{\partial y_1}(Y_0) \frac{\partial f_1}{\partial x_i}(X_0) + \ldots + \frac{\partial g}{\partial y_m}(Y_0) \frac{\partial f_m}{\partial x_i}(X_0) \quad (i = 1, \ldots, p).
+\]
+
+
+
+\subsection*{Инвариантность (неизменность) формы 1-го дифференциала}
+
+Формула
+
+
+
+\[
+dg(Y_0) = \frac{\partial g}{\partial y_1}(Y_0) dy_1(X_0) + \ldots + \frac{\partial g}{\partial y_m}(Y_0) dy_m(X_0)
+\]
+
+
+
+верна и в случае, когда переменные \( y_1, \ldots, y_m \) являются функциями:
+
+
+
+\[
+y_i = f_i(X) \quad (i = 1, \ldots, m).
+\]
+
+
+
+В этом случае
+
+
+
+\[
+Y_0 = (f_1(X_0), f_2(X_0), \ldots, f_m(X_0)).
+\]
+
+
+
+
 }

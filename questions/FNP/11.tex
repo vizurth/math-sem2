@@ -1,5 +1,344 @@
 {
 \subsection{Теорема о существовании и дифференцируемости неявно заданных функций  р  переменных, заданных системой функциональных уравнений. Приемы вычисления производных .  
-Вычисление первых производных функций y(x), z(x), u(x), заданных неявно системой
- ?????}
+Вычисление первых производных функций y(x), z(x), u(x), заданных неявно системой}
+
+\subsection*{Определение 5.2}
+
+1) Пусть \( \Omega_1 \subset \mathbb{R}_p \), \( \Omega_2 \subset \mathbb{R} \); \( F(X,y) = F(x_1,...,x_p,y) \) определена на множестве \( \Omega_1 \times \Omega_2 \), и для любого \( X \in \Omega_1 \) существует единственный \( y \in \Omega_2 \) такой, что \( F(X,y) = 0 \).
+
+Тогда уравнение \( F(X,y)=0 \) определяет на множестве \( \Omega_1 \) функцию \( y = f(X) \) с множеством значений из \( \Omega_2 \) следующим образом:
+
+каждому \( X \in \Omega_1 \) сопоставляем \( y = f(X) \), где \( F(X, f(X)) = 0 \).
+
+Такая функция называется **неявно заданной функцией \( p \) переменных**.
+
+\subsection*{Более общий случай}
+
+Пусть \( \Omega_1 \subseteq \mathbb{R}^p \), \( \Omega_2 \subseteq \mathbb{R}^m \). Пусть на \( \Omega_1 \times \Omega_2 \) определены \( m \) функций  
+
+
+
+\[
+F_i(X,Y) = F_i(x_1, \dots, x_p, y_1, \dots, y_m), \quad i = 1,2, \dots, m.
+\]
+
+
+
+Пусть система  
+
+
+
+\[
+\begin{cases}
+F_1(X, Y) = 0 \\
+\vdots \\
+F_m(X, Y) = 0
+\end{cases}
+\quad (5.1)
+\]
+
+
+
+для каждого \( X \in \Omega_1 \) имеет единственное решение \( Y \in \Omega_2 \).  
+
+Тогда говорят, что система (5.1) задает неявно \( m \) функций  
+
+
+
+\[
+y_1 = f_1(X), \quad y_2 = f_2(X), \quad \dots, \quad y_m = f_m(X),
+\]
+
+
+
+определенных на множестве \( \Omega_1 \).  
+
+(то есть, каждому \( X \in \Omega_1 \) сопоставляются \( y_1 = f_1(X), y_2 = f_2(X), \dots, y_m = f_m(X) \) такие, что  
+
+
+
+\[
+\begin{cases}
+F_1(X, f_1(X), \dots, f_m(X)) = 0 \\
+\vdots \\
+F_m(X, f_1(X), \dots, f_m(X)) = 0
+\end{cases}
+\]
+).
+
+
+\subsection*{Теорема 5.2}
+
+1) Пусть функции \( F_1, F_2, \dots, F_m \) определены и непрерывны в некоторой окрестности точки \( (X^o, Y^o) \in \mathbb{R}^{p+m} \).
+
+2) Точка \( (X^o, Y^o) \) удовлетворяет системе (5.1).
+
+3) Существуют и непрерывны все частные производные функций \( F_1, F_2, \dots, F_m \) в окрестности точки \( (X^o, Y^o) \).
+
+
+
+\[
+\frac{D(F_1, F_2, \dots, F_m)}{D(y_1, y_2, \dots, y_m)} =
+\begin{vmatrix}
+\frac{\partial F_1}{\partial y_1} & \frac{\partial F_1}{\partial y_2} & \dots & \frac{\partial F_1}{\partial y_m} \\
+\dots & \dots & \dots & \dots \\
+\frac{\partial F_m}{\partial y_1} & \frac{\partial F_m}{\partial y_2} & \dots & \frac{\partial F_m}{\partial y_m}
+\end{vmatrix}
+\]
+
+
+
+отличен от нуля в точке \( (X^o, Y^o) \).
+
+4) Якобиан
+
+Тогда
+
+1) В некоторой окрестности точки \( (X^o, Y^o) \) система (5.1) определяет \( y_1, y_2, \dots, y_m \) как функции от \( x_1, \dots, x_p \): \( y_1 = f_1(X), y_2 = f_2(X), \dots, y_m = f_m(X) \).
+
+2) \( f_1(X^o) = y_1^o, f_2(X^o) = y_2^o, \dots, f_m(X^o) = y_m^o \) (где \( Y^o = (y_1^o, y_2^o, \dots, y_m^o) \)).
+
+3) Функции \( f_1(X), f_2(X), \dots, f_m(X) \) непрерывны в некоторой окрестности точки \( (X^o, Y^o) \) и имеют непрерывные частные производные по всем переменным в точке \( (X^o, Y^o) \).
+
+(без доказательства).
+
+\subsection*{Следствие. Приемы вычисления производных}
+
+1) Возьмем частные производные по \( x_i \) от обеих частей каждого равенства системы (5.1)
+
+
+
+\[
+\frac{\partial F_1}{\partial x_i} + \frac{\partial F_1}{\partial y_1} \frac{\partial y_1}{\partial x_i} + \ldots + \frac{\partial F_1}{\partial y_m} \frac{\partial y_m}{\partial x_i} = 0
+\]
+
+
+
+
+
+\[
+\vdots
+\]
+
+
+
+
+
+\[
+\frac{\partial F_m}{\partial x_i} + \frac{\partial F_m}{\partial y_1} \frac{\partial y_1}{\partial x_i} + \ldots + \frac{\partial F_m}{\partial y_m} \frac{\partial y_m}{\partial x_i} = 0
+\]
+
+
+
+
+
+\[
+\Leftrightarrow
+\]
+
+
+
+
+
+\[
+\begin{cases}
+\frac{\partial F_1}{\partial y_1} \frac{\partial y_1}{\partial x_i} + \ldots + \frac{\partial F_1}{\partial y_m} \frac{\partial y_m}{\partial x_i} = -\frac{\partial F_1}{\partial x_i} \\
+\vdots \\
+\frac{\partial F_m}{\partial y_1} \frac{\partial y_1}{\partial x_i} + \ldots + \frac{\partial F_m}{\partial y_m} \frac{\partial y_m}{\partial x_i} = -\frac{\partial F_m}{\partial x_i}
+\end{cases}
+\]
+
+
+
+Относительно неизвестных \( \frac{\partial y_1}{\partial x_i}, \frac{\partial y_2}{\partial x_i}, \ldots, \frac{\partial y_m}{\partial x_i} \) имеем СЛАУ, определитель которой
+
+
+
+\[
+\Delta = D(F_1, F_2, \ldots, F_m) = D(y_1, y_2, \ldots, y_m)
+\]
+
+
+
+отличен от нуля в некоторой окрестности точки \( (x^0, y^0) \)
+
+(так как якобиан – непрерывная функция, и в точке \( (x^0, y^0) \) отличен от нуля).
+
+Следовательно, система имеет единственное решение \( \frac{\partial y_j}{\partial x_i} = \frac{\Delta_j}{\Delta} \) (j = 1, 2, ..., m), и частные производные \( \frac{\partial y_j}{\partial x_i} \) непрерывны как отношения непрерывных функций \( \Delta_j \) и \( \Delta \), где знаменатель отличен от нуля.
+
+2) Если существуют и непрерывны все частные производные 2-го порядка функций \( F_1, F_2, \ldots, F_m \), то, взяв частную производную по \( x_k \) от \( \frac{\partial y_j}{\partial x_i} \), получим \( \frac{\partial^2 y_j}{\partial x_k \partial x_i} \), непрерывную.
+
+\subsection*{Пример вычисления якобиана}
+
+Рассмотрим систему:
+
+
+
+\[
+\begin{cases}
+x + y + z + u = a \\
+x^2 + y^2 + z^2 + u^2 = b^2 \\
+x^3 + y^3 + z^3 + u^3 = c^3
+\end{cases}
+\]
+
+
+
+Эта система определяет функции \( y = y(x), z = z(x), u = u(x) \).
+
+Вычислим якобиан:
+
+
+
+\[
+\frac{D(F_1, F_2, F_3)}{D(y, z, u)} =
+\begin{vmatrix}
+\frac{\partial F_1}{\partial y} & \frac{\partial F_1}{\partial z} & \frac{\partial F_1}{\partial u} \\
+\frac{\partial F_2}{\partial y} & \frac{\partial F_2}{\partial z} & \frac{\partial F_2}{\partial u} \\
+\frac{\partial F_3}{\partial y} & \frac{\partial F_3}{\partial z} & \frac{\partial F_3}{\partial u}
+\end{vmatrix}
+=
+\begin{vmatrix}
+1 & 1 & 1 \\
+2y & 2z & 2u \\
+3y^2 & 3z^2 & 3u^2
+\end{vmatrix}
+\]
+
+
+
+Вычисляя определитель:
+
+
+
+\[
+= 6
+\begin{vmatrix}
+1 & 1 & 1 \\
+y & z & u \\
+y^2 & z^2 & u^2
+\end{vmatrix}
+\]
+
+
+
+Преобразуем:
+
+
+
+\[
+= 6
+\begin{vmatrix}
+1 & 1 & 1 \\
+0 & z - y & u - y \\
+0 & z^2 - yz & u^2 - yu
+\end{vmatrix} =
+
+\begin{vmatrix}
+z - y & u - y \\
+z(z - y) & u(u - y)
+\end{vmatrix} 
+= 6(z - y)(u - y)\begin{vmatrix}
+1 & 1 \\
+z & u
+\end{vmatrix} = 6(z - y)(u - y)(u - z)
+\]
+
+
+
+Следовательно, по теореме 5.2, в окрестности каждой точки \( (x, y, z, u) \), где \( z \neq y, u \neq y, u \neq z \), система определяет \( y, z, u \) как функции от \( x \).
+
+\subsection*{Пример решения системы методом Крамера}
+
+Рассмотрим систему:
+
+
+
+\[
+\begin{cases}
+x + y + z + u = a \\
+x^2 + y^2 + z^2 + u^2 = b^2 \\
+x^3 + y^3 + z^3 + u^3 = c^3
+\end{cases}
+\]
+
+
+
+Эта система определяет функции \( y = y(x), z = z(x), u = u(x) \).
+
+Возьмем производные по \( x \) от обеих частей каждого равенства:
+
+
+
+\[
+\begin{cases}
+1 + y' + z' + u' = 0 \\
+2x + 2yy' + 2zz' + 2uu' = 0 \\
+3x^2 + 3y^2 y' + 3z^2 z' + 3u^2 u' = 0
+\end{cases}
+\]
+
+
+
+что эквивалентно:
+
+
+
+\[
+\begin{cases}
+y' + z' + u' = -1 \\
+2yy' + 2zz' + 2uu' = -2x \\
+3y^2 y' + 3z^2 z' + 3u^2 u' = -3x^2
+\end{cases}
+\]
+
+
+
+Решим методом Крамера.
+
+Якобиан системы:
+
+
+
+\[
+\Delta = \frac{D(F_1, F_2, F_3)}{D(y, z, u)} =
+\begin{vmatrix}
+1 & 1 & 1 \\
+2y & 2z & 2u \\
+3y^2 & 3z^2 & 3u^2
+\end{vmatrix}
+= 6(z - y)(u - y)(u - z)
+\]
+
+
+
+Вычислим \( \Delta_1 \):
+
+
+
+\[
+\Delta_1 =
+\begin{vmatrix}
+-1 & 1 & 1 \\
+-2x & 2z & 2u \\
+-3x^2 & 3z^2 & 3u^2
+\end{vmatrix}
+= -6(z - x)(u - x)(u - z)
+\]
+
+
+
+Следовательно,
+
+
+
+\[
+y' = \frac{\Delta_1}{\Delta} = \frac{-(z - x)(u - x)}{(z - y)(u - y)}
+\]
+
+
+
+Выражения для \( z' \) и \( u' \) вычислите самостоятельно.
+z
+
 }
